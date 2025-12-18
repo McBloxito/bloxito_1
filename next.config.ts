@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: 'host',
-            value: 'bloxito.netlify.app',
+            value: 'webbloxito.netlify.app',
           },
         ],
         destination: 'https://bloxito.com/:path*',
