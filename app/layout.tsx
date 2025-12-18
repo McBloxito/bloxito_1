@@ -1,8 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Head from "next/head"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { FontPreconnect } from "./components/FontPreconnect"
 import "./globals.css"
 
 const geist = Geist({
@@ -40,7 +40,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <FontPreconnect />
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
         {children}
         <Analytics />
